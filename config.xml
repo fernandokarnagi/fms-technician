@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.fmstechnician260921" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>fms-technician</name>
+  <name>FMS Technician</name>
   <description>
-        An Ionic Framework and Cordova project.
+        FMS Technician Mobile Application
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+  <author email="fkarnagi@gmail.com" href="http://fernandokarnagi.wordpress.com">
+      Fernando Karnagi
     </author>
   <content src="index.html"/>
   <access origin="*"/>
