@@ -1,0 +1,55 @@
+<ion-view view-title="Setting" cache-view="true">
+
+<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-checkmark-round" ng-click="saveSetting()">
+      </button>
+</ion-nav-buttons>
+   
+   
+    
+     
+<ion-content>
+<div class="list">
+	
+
+	<label class="item item-input"> 
+		<span class="input-label">NRIC</span>
+		<input type="text" ng-model="setting.nric">
+	</label> 
+	
+	<label class="item item-input"> 
+		<span class="input-label">Email Address</span>
+		<input type="text" ng-model="setting.emailAddress">
+	</label> 
+	
+	<label class="item item-input"> 
+		<span class="input-label">Password</span>
+		<input type="password" ng-model="setting.password">
+	</label> 
+	
+	<label class="item item-input"> 
+		<span class="input-label">Confirm Password</span>
+		<input type="password" ng-model="setting.confirmPassword">
+	</label> 
+	
+	<ion-toggle  ng-model="setting.emailNotification">
+        Enable Email Notification
+    </ion-toggle>
+    
+	<ion-toggle  ng-model="setting.smsNotification">
+        Enable SMS Notification
+    </ion-toggle>
+    
+	<ion-toggle  ng-model="setting.pushNotification">
+        Enable Push Notification
+    </ion-toggle>
+	
+	<ion-toggle  ng-model="setting.locationTracking">
+        Enable Location Tracking
+    </ion-toggle>
+	
+	
+</div>
+
+</ion-content> 
+</ion-view>
