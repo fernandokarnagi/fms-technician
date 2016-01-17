@@ -1,6 +1,6 @@
 angular.module('fms.services', [])
 
-.factory('CaseService', function() {
+.factory('TaskService', function() {
 
 	return {
 

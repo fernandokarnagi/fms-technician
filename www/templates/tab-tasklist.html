@@ -1,66 +1,22 @@
-<ion-view view-title="Report Case" cache-view="true">
+<ion-view view-title="Assignment" cache-view="true">
 
-	<ion-nav-buttons side="left">
-      <button class="button button-icon icon ion-camera" ng-click="attachPicture()"> 
-      </button>
-    </ion-nav-buttons>
-    
 	<ion-nav-buttons side="right">
-      <button class="button button-icon icon ion-ios-paperplane" ng-click=submitCase()>
+      <button class="button button-icon icon ion-android-refresh" ng-click="reloadTaskList()">
       </button>
     </ion-nav-buttons>
    
-
    <ion-content class="padding">
     
-    <form>
-    	<h4>Case Information</h4>
-        <div class="list">	
-            <label class="item item-input">
-                <span class="input-label">Date</span>
-                <input type="date"  ng-model="newcase.date">
-            </label>
-            
-             <label class="item item-input">
-                <span class="input-label">Building</span>
-                <select ng-model="newcase.building">
-                	<option>Changi Mall</option>
-                	<option>NTUC FairPrice</option>
-                	<option>One Marina Boulevard</option>
-                	<option>One Raffles Quay</option>
-                </select>
-            </label>
-            
-            <label class="item item-input">
-                <span class="input-label">Details of Location</span>
-                <textarea rows="3" ng-model="newcase.location"></textarea>
-            </label>
-            
-            <label class="item item-input">
-                <span class="input-label">Remarks</span>
-                <textarea rows="3" ng-model="newcase.remarks"></textarea>
-            </label>
-          </div>
-          
-          <h4>How do we contact you?</h4>
-          <div class="list">	
-            <label class="item item-input">
-                <span class="input-label">Mobile Number</span>
-                <input  type="tel" ng-model="newcase.mobileNumber">
-            </label>
-            
-            <label class="item item-input">
-                <span class="input-label">Email Address</span>
-                <input  type="text" ng-model="newcase.emailAddress">
-            </label>
-            
-            
-        </div>
-       
-      </form>
-      
-      <br/>
-      <img src="" id="pic" name="pic" src="100" width="200"/>
+    <ion-list >
+      <ion-item class="item-icon-right" ng-repeat="task in tasks" type="item-text-wrap" ng-click="viewDetails(task)">
+        <h2>Task ID: {{task.taskId}}</h2>
+        <p>Job: {{task.job}}</p>
+        <p>Property: {{task.property}}</p>
+        <p>Address: {{task.address}}</p>
+        <p>Date: {{task.date}}</p>
+        <i class="icon ion-android-arrow-dropright"><h4></h4></i> 
+      </ion-item>
+    </ion-list>
       
     </ion-content>
 </ion-view>

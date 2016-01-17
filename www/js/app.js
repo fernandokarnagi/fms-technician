@@ -50,6 +50,16 @@ angular.module('fms', ['ionic', 'fms.controllers', 'fms.services', 'fms.config',
     }
   })
 
+  .state('tab.taskdetails', {
+    url: '/taskdetails?task',
+    views: {
+      'tab-tasklist': {
+        templateUrl: 'templates/tab-taskdetails.html',
+        controller: 'TaskDetailsCtrl'
+      }
+    }
+  })
+  
   .state('tab.setting', {
     url: '/setting',
     views: {
