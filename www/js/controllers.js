@@ -50,6 +50,27 @@ angular.module('fms.controllers', [])
 	}
 })
 
+.controller('TaskDetailsCtrl', function($scope, $state, $window, $stateParams, 
+		TaskService, $cordovaDialogs, $cordovaCamera, $cordovaActionSheet) {
+	
+	var taskObj = angular.fromJson($stateParams.task);
+	$scope.task = taskObj.task;
+	
+	$scope.showAction = function() {
+		 var options = {
+		    title: 'What would like to do with this Task?',
+		    buttonLabels: ['Show Location in Map', 'Log Timesheet', 'Scan Document', 'Customer Signature'],
+		    addCancelButtonWithLabel: 'Cancel',
+		    androidEnableCancelButton : true,
+		    winphoneEnableCancelButton : true
+		  };
+		 $cordovaActionSheet.show(options).then(function(btnIndex) {
+	    	  var index = btnIndex;
+	    	  console.log("Button index: " + index);
+	      });
+	}
+})
+
 .controller('SettingCtrl', function($scope, $state, $window, $stateParams, TaskService, 
 		$cordovaDialogs) {
 	$scope.setting = {};

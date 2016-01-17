@@ -1,0 +1,30 @@
+<ion-view view-title="Info" cache-view="true">
+
+	<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-bag" ng-click="showAction()">
+       	
+      </button>
+    </ion-nav-buttons>
+    
+    
+  <ion-content >
+  	<div class="padding">
+  	<p >
+  	  Assignment ID: {{task.taskId}}</p>
+    <p >
+  	  Job Description: {{task.job}}<BR/>
+  	  {{task.jobDesc}}
+    </p>
+     <p >
+  	  To be performed by: {{task.date}}
+    </p>
+   <p >
+  	  Property: {{task.property}} 
+    </p>
+      <p >
+  	  Location: {{task.address}}
+    </p>
+    </div>
+   
+  </ion-content>
+</ion-view>

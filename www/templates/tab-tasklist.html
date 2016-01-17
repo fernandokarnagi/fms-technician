@@ -11,9 +11,10 @@
       <ion-item class="item-icon-right" ng-repeat="task in tasks" type="item-text-wrap" ng-click="viewDetails(task)">
         <h2>Task ID: {{task.taskId}}</h2>
         <p>Job: {{task.job}}</p>
+        <p>Date: {{task.date}}</p>
         <p>Property: {{task.property}}</p>
         <p>Address: {{task.address}}</p>
-        <p>Date: {{task.date}}</p>
+        
         <i class="icon ion-android-arrow-dropright"><h4></h4></i> 
       </ion-item>
     </ion-list>
